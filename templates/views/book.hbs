@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 col-lg-12">
+      <article>
+        <p><a href="/books">&larr; Back to books</a></p>
+        <hr>
+        <header>
+          <h1>{{data.book.title}}</h1>
+        </header>
+        <div class="row">
+          <div class="col-md-6 col-lg-6">
+            {{#if data.book.image}}
+              <img src="{{cloudinaryUrl data.book.image crop='fit'}}" class="img-responsive">
+            {{/if}}
+          </div>
+          <div class="col-md-6 col-lg-6">
+            <ul class="list-group">
+              <li class="list-group-item"><strong>Price: </strong>{{data.book.price}}</li>
+              <li class="list-group-item"><strong>Author: </strong>{{data.book.author}}</li>
+            </ul>
+            <div class="well">
+              {{data.book.description}}
+            </div>
+            <a class="btn btn-success btn-block" href="/contact">Ask About This Product</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
